@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  object_detection:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: objectdetection
+    container_name: objectdetection
+    ports:
+      - "8000:8000"
