@@ -12,6 +12,7 @@ app = FastAPI()
 
 # Load YOLOv5 model
 model = torch.hub.load("ultralytics/yolov5", "yolov5s")
+os.mkdir("result")
 app.mount("/result", StaticFiles(directory="result"), name="result")
 
 @app.post("/object-detect/")
