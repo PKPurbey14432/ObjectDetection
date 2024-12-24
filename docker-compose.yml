@@ -1,10 +1,10 @@
-version: "3.9"
+version: "3.5"
 
 services:
   object_detection:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: ./Dockerfile
     image: objectdetection
     container_name: objectdetection
     ports:
